@@ -27,6 +27,13 @@ var main = function() {
 
     $.get("api.php?pwd=" + pwd + "&datas=" + JSON.stringify(datas), function(data) {
       $('.result .container .alert h2').text(data);
+      if(data == "Saved.") {
+        $('.result .container .alert').addClass("alert-success");
+        $('.result .container .alert').removeClass("alert-danger");
+      } else {
+        $('.result .container .alert').addClass("alert-danger");
+        $('.result .container .alert').removeClass("alert-success");
+      }
       $('.result').show();
     });
 
