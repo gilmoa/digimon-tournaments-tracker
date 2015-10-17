@@ -10,7 +10,7 @@ var main = function() {
   $('.btn').click(function() {
     var datas = {};
     $('.tournaments-list li').each(function(index) {
-      datas[$(this).children('.badge').text()] = $(this).hasClass('list-group-item-success');
+      datas[$(this).children('h2').children('p').text()] = $(this).hasClass('list-group-item-success');
     });
 
     $.get("api.php?datas=" + JSON.stringify(datas), function(data) {
@@ -22,7 +22,7 @@ var main = function() {
 
   $.getJSON("api.json", function(data) {
     $('.tournaments-list li').each(function(index) {
-      if(data[$(this).children('.badge').text()]) {
+      if(data[$(this).children('h2').children('p').text()]) {
         $(this).addClass('list-group-item-success');
         $(this).children('h2').children('span').removeClass('glyphicon-star-empty');
         $(this).children('h2').children('span').addClass('glyphicon-star');

@@ -1,7 +1,7 @@
 # digimon-tournaments-tracker
 
 TODO:
-Thunder and Wind cup both use W as letter. Check always see both of them true.
+Security code to save.
 
 MAYBE:
 digimon list for special cups.
