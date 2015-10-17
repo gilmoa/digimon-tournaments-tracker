@@ -44,3 +44,40 @@ body {
   margin-left: 25px;
   display: inline;
 }
+
+.separator {
+  border-bottom: 1px solid #eee;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.shade {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  display: none;
+}
+
+.shade .container {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.code .btn-group {
+  margin: 5px;
+}
+
+.result .container {
+  background-color: rgba(0, 0, 0, 0.0);
+  border: none;
+  padding: none;
+}

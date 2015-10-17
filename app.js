@@ -1,4 +1,6 @@
 var main = function() {
+  var pwd;
+
   $('.tournaments-list li').click(function() {
     $(this).toggleClass('list-group-item-success');
     $(this).children('h2').children('span').toggleClass('glyphicon-star-empty');
@@ -7,17 +9,30 @@ var main = function() {
     updateBar();
   });
 
-  $('.btn').click(function() {
+  $('.save').click(function() {
+    pwd = "";
+    $('.code').show();
+  });
+
+  $('.code .btn-group').children('.btn').click(function() {
+    pwd += $(this).text();
+  });
+
+  $('.confirm').click(function() {
+    $('.code').hide();
     var datas = {};
     $('.tournaments-list li').each(function(index) {
       datas[$(this).children('h2').children('p').text()] = $(this).hasClass('list-group-item-success');
     });
 
-    $.get("api.php?datas=" + JSON.stringify(datas), function(data) {
-      alert(data);
+    $.get("api.php?pwd=" + pwd + "&datas=" + JSON.stringify(datas), function(data) {
+      $('.result .container .alert h2').text(data);
+      $('.result').show();
     });
 
-
+    $('.result .container').click(function() {
+      $('.result').hide();
+    });
   });
 
   $.getJSON("api.json", function(data) {
