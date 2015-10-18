@@ -2,9 +2,8 @@
 
 <strong>TODO</strong>
 
-Info pop-up with:
+Infos with:
 <ol>
-  <li>Calendar (?)</li>
   <li>Digimons' Version</li>
   <li>Digimons' Type Cups</li>
   <li>Digimons' Special Cups</li>
