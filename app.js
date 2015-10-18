@@ -89,7 +89,7 @@ var updateBar = function() {
   }, 1000);
 
 
-  $('.tournaments-list').hide();
+  // $('.tournaments-list').hide();
 }
 
 $(document).ready(main);
