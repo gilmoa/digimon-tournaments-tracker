@@ -64,6 +64,7 @@ var updateBar = function() {
   var width = count * (100 / 21);
   $('.progress-bar').addClass('active');
   $('.progress-bar').attr('style', "width: " + width.toFixed(0) + "%;");
+  $('.progress-bar').text(width.toFixed(0) + "%");
   setTimeout(function() {
       $('.progress-bar').removeClass('active');
   }, 1000);
