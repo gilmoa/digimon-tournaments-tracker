@@ -1,4 +1,6 @@
 # digimon-tournaments-tracker
 
-MAYBE:
-digimon list for special cups.
+TODO
+<ul>
+  <li>Info popup</li>
+</ul>
