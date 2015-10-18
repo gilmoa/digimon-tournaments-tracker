@@ -9,6 +9,29 @@ var main = function() {
     updateBar();
   });
 
+  $('.footerbar .pull-left').click(function() {
+    $('.tournaments-list').hide();
+    $('.calendar').show();
+  });
+
+  $('.footerbar .pull-right').click(function() {
+    $('.tournaments-list').hide();
+    $('.infos').show();
+  });
+
+  $('.shade .container .glyphicon-remove').click(function() {
+    $(this).parent().parent('.shade').hide();
+  });
+
+  $('.second .btn').click(function() {
+    $('.tournaments-list').show();
+    $(this).parent('.second').hide();
+  });
+
+  $('.result .container').click(function() {
+    $(this).parent('.shade').hide();
+  });
+
   $('.save').click(function() {
     pwd = "";
     $('.code').show();
@@ -35,10 +58,6 @@ var main = function() {
         $('.result .container .alert').removeClass("alert-success");
       }
       $('.result').show();
-    });
-
-    $('.result .container').click(function() {
-      $('.result').hide();
     });
   });
 
@@ -69,6 +88,8 @@ var updateBar = function() {
       $('.progress-bar').removeClass('active');
   }, 1000);
 
+
+  $('.tournaments-list').hide();
 }
 
 $(document).ready(main);
