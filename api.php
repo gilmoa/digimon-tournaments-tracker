@@ -6,7 +6,7 @@
     return 1;
   }
 
-  $datas = $_GET['datas'];
+  $datas = json_encode(json_decode($_GET['datas']));
   $file = fopen("api.json", "w") or die ("Error while saving.");
   fwrite($file, $datas);
   fclose($file);
