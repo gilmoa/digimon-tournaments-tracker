@@ -52,6 +52,10 @@ body {
   width: 100%;
 }
 
+.second {
+  display: none;
+}
+
 .shade {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -70,7 +74,6 @@ body {
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 10px;
-  overflow-y: auto;
 }
 
 .glyphicon-remove {
